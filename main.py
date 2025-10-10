@@ -30,6 +30,6 @@ if st.button("Predict"):
         input_scaled = scaler.transform(input_df)
 
         pred = model.predict(input_scaled)[0]
-        st.success(f"✅ Predicted Risk: {np.exp(pred):.2f}")
+        st.success(f"✅ Predicted Risk: {pred:.2f}")
     else:
         st.error("❌ Model or scaler file not found. Make sure both 'model.joblib' and 'scaler.joblib' are in the same directory.")
